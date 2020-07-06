@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-use Core\Controller\Controller;
+use Core\Mvc\Controller;
 
 class HomeController extends Controller 
 {

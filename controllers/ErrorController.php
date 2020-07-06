@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use Core\Controller\Controller;
+use Core\Mvc\Controller;
 
 class ErrorController extends Controller 
 {

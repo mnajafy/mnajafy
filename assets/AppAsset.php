@@ -10,11 +10,11 @@ class AppAsset extends AssetBundle
 {
     public $css = [
         'css/style.css',
-        'libs/fontawesome/css/fontawesome-all.min.css',
+        'libs/fontawesome/fontawesome.min.css',
     ];
 
     public $js  = [
-        'js/jquery-3.5.1/jquery.js',
+        'libs/jquery/jquery.js',
         'js/main.js',
     ];
 }

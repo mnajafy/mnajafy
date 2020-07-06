@@ -134,14 +134,6 @@ class App extends BaseObject
         return $this->_layout;
     }
     public function run() {
-        error_reporting(0);
-        set_error_handler(function ($severity, $message, $file, $line) {
-            $response       = Framework::$app->response;
-            $response->code = 500;
-            $response->data = Framework::$app->runAction('error/index', ['title' => 'Error', 'message' => $file . ': ' . $line . '<br/>Error: ' . $message]);
-            $response->send();
-            exit;
-        });
         try {
             $response = $this->handleRequest();
             $response->send();
@@ -166,15 +158,17 @@ class App extends BaseObject
     public function runAction($route, $params) {
         list($controllerID, $actionID) = explode('/', $route);
         $this->controller = $this->createController($controllerID);
+        var_dump($this->controller);
         return $this->controller->runAction($actionID, $params);
     }
     public function createController($controllerID) {
         $controllerName = str_replace(' ', '', ucwords(str_replace('-', ' ', $controllerID)));
         $className      = $this->controllerNamespace . '\\' . $controllerName . 'Controller';
-        
+        var_dump($className);
         if (!class_exists($className) || !is_subclass_of($className, 'Core\Mvc\Controller')) 
         {
-            throw new Exception("Controller { <b>$controllerID</b> } Not Found");
+            var_dump($className);
+            //throw new Exception("Controller { <b>$controllerID</b> } Not Found");
         }
         return BaseObject::createObject(['class' => $className, 'id' => $controllerID]);
     }
