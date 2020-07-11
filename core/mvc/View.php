@@ -13,7 +13,7 @@ class View extends BaseObject
     /**
      * @var string
      */
-    public $title;
+    public $title = 'hello world !';
     /**
      * @var array
      */

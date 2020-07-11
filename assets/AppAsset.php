@@ -9,12 +9,12 @@ use Core\Assets\AssetBundle;
 class AppAsset extends AssetBundle 
 {
     public $css = [
-        'css/style.css',
-        'libs/fontawesome/fontawesome.min.css',
+        'assets/libs/fontawesome/fontawesome.min.css',
+        'assets/css/style.css',
     ];
 
     public $js  = [
-        'libs/jquery/jquery.js',
-        'js/main.js',
+        'assets/libs/jquery/jquery.js',
+        'assets/js/function.js',
     ];
 }

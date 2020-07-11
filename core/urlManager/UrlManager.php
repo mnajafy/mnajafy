@@ -30,7 +30,7 @@ class UrlManager extends BaseObject
                 break;
             }
         }
-
+        
         if ($route === null) {
             throw new Exception('request page not found!');
         }

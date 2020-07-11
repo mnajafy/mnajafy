@@ -19,7 +19,6 @@ class Framework
 
     public static function getAlias($name) 
     {
-        var_dump($name);
         $key   = $name;
         $value = '';
         if (strpos($name, '/') !== false) 

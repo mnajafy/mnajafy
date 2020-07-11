@@ -10,13 +10,7 @@ class HomeController extends Controller
     
     public function actionIndex() 
     {
-
+        
         return $this->render();
-    }
-
-    public function actionHome() 
-    {
-
-        echo 'hello world !';
     }
 }

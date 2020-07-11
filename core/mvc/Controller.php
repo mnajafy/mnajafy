@@ -32,7 +32,7 @@ class Controller extends BaseObject
      * @param string $actionID
      * @return Action
      */
-    public function createAction(string $actionID) 
+    public function createAction(string $actionID)  
     {
         $methodName = 'action' . str_replace(' ', '', ucwords(str_replace('-', ' ', $actionID)));
         
@@ -69,7 +69,7 @@ class Controller extends BaseObject
     public function renderLayout($params = []) 
     {
         $layoutFile = $this->getLayoutFile();
-
+        
         if ($layoutFile === false) 
         {
             return $params['content'];
@@ -92,7 +92,6 @@ class Controller extends BaseObject
     public function getLayoutFile() 
     {
         $layout = false;
-
         if (is_string($this->layout)) 
         {
             $layout = $this->layout;

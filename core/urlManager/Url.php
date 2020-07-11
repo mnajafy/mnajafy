@@ -2,16 +2,19 @@
 
 namespace Core\UrlManager;
 
+use Exception;
+use Core\Framework;
 use Core\BaseObject;
 
 class Url extends BaseObject 
 {
-    public static function to($params = []) {
+    public static function to($params = []) 
+    {
         if (!isset($params[0])) {
             throw new Exception('url to exception');
         }
         $key   = null;
-        $rules = \Framework::$app->urlManager->rules;
+        $rules = Framework::$app->urlManager->rules;
         foreach ($rules as $index => $value) {
             if ($value == $params[0]) {
                 $key = $index;
@@ -28,6 +31,6 @@ class Url extends BaseObject
             unset($params['#']);
         }
         $query = http_build_query($params);
-        return \Framework::getAlias("@web/$key" . ($query ? '?' . $query : '') . ($hash ? "#$hash" : ''));
+        return Framework::getAlias("@web/$key" . ($query ? '?' . $query : '') . ($hash ? "#$hash" : ''));
     }
 }
