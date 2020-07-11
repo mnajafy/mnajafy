@@ -15,7 +15,7 @@ $this->params['breadcrumb'][] = $this->title;
             <ul class="breadcrumb tem">
             <?php foreach ($dataCategory as $key): ?>
                 <li>
-                    <?php if ($key->title == 'All categories'): ?>
+                    <?php if ($key->id == $request): ?>
                     <a href="<?= Url::to(['template/index', 'category' => $key->id]) ?>" class="btn btn-outline-dark active"><?= $key->title; ?></a>
                     <?php else: ?>
                     <a href="<?= Url::to(['template/index', 'category' => $key->id]) ?>" class="btn btn-outline-dark"><?= $key->title; ?></a>
@@ -33,7 +33,7 @@ $this->params['breadcrumb'][] = $this->title;
                     </div>
                     <div class="card-body">
                         <h5><?= $key->title; ?><small> (<?= $key->created_at; ?>) </small></h5>
-                        <a href="<?= Url::to(['template/index', 'single' => $key->m2_id]) ?>"><?= $key->m2_title; ?></a>
+                        <a href="#"><?= $key->m2_title; ?></a>
                         <p><?= $key->content; ?></p>
                         <a href="<?= Url::to(['template/index','single' => $key->id]) ?>" class="btn btn-primary">voir !</a>
                     </div>
