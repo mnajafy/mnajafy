@@ -31,6 +31,6 @@ class Url extends BaseObject
             unset($params['#']);
         }
         $query = http_build_query($params);
-        return Framework::getAlias("@web/$key" . ($query ? '?' . $query : '') . ($hash ? "#$hash" : ''));
+        return Framework::getAlias("@web/$key" . ($query ? "&$query" : '') . ($hash ? "#$hash" : ''));
     }
 }

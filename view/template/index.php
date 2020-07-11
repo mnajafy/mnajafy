@@ -24,7 +24,7 @@ $this->params['breadcrumb'][] = $this->title;
             <?php endforeach ?>
             </ul>
         </div>
-        <div class="row justify-content-around">
+        <div class="row">
             <?php foreach ($dataGallery as $key): ?>
             <div class="col-6">
                 <div class="card">
@@ -40,6 +40,7 @@ $this->params['breadcrumb'][] = $this->title;
                 </div>
             </div>
             <?php endforeach ?>
+        </div>
         <div class="section-footer text-center-m">
             <a class="btn btn-outline-primary" href="#">voir plus!</a>
         </div>

@@ -8,9 +8,9 @@ use Core\Mvc\Controller;
 
 class TemplateController extends Controller 
 {
-    public function actionIndex() 
+    public function actionIndex($category = null) 
     {
-        $dataGallery  = Template::byCategory();
+        $dataGallery  = Template::byCategory($category);
         $dataCategory = Category::all();
 
         return $this->render([
