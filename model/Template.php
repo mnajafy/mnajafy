@@ -1,9 +1,10 @@
 <?php
 namespace Model;
 
-use Core\Model\Model;
+use Core\Mvc\Model;
+use Model\Category;
 /**
- * Gallery
+ * Template
  * 
  * @property int $id
  * @property string $img
@@ -41,14 +42,5 @@ class Template extends Model
             FROM template AS m1 
             INNER JOIN category m2 ON m1.category_id = m2.id
             ORDER BY m1.id DESC');
-    }
-
-    public function getCategory() 
-    {
-        if ($this->_category === null) 
-        {
-            $this->_category = Category::one($this->category_id);
-        }
-        return $this->_category;
     }
 }

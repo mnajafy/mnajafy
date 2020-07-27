@@ -2,6 +2,7 @@
 
 use Core\Framework;
 use Core\UrlManager\Url;
+
 $this->title = 'web themes & templates';
 $this->params['breadcrumb'][] = ['label' => 'Home', 'url' => ['home/index']];
 $this->params['breadcrumb'][] = $this->title;
@@ -15,7 +16,7 @@ $this->params['breadcrumb'][] = $this->title;
             <ul class="breadcrumb tem">
             <?php foreach ($dataCategory as $key): ?>
                 <li>
-                    <?php if ($key->id == $request): ?>
+                    <?php if ($key->id == $category): ?>
                     <a href="<?= Url::to(['template/index', 'category' => $key->id]) ?>" class="btn btn-outline-dark active"><?= $key->title; ?></a>
                     <?php else: ?>
                     <a href="<?= Url::to(['template/index', 'category' => $key->id]) ?>" class="btn btn-outline-dark"><?= $key->title; ?></a>
@@ -25,7 +26,7 @@ $this->params['breadcrumb'][] = $this->title;
             </ul>
         </div>
         <div class="row">
-            <?php foreach ($dataGallery as $key): ?>
+            <?php foreach ($dataTemplate as $key): ?>
             <div class="col-6">
                 <div class="card">
                     <div style="height:300px; overflow: hidden;">
@@ -35,7 +36,7 @@ $this->params['breadcrumb'][] = $this->title;
                         <h5><?= $key->title; ?><small> (<?= $key->created_at; ?>) </small></h5>
                         <a href="#"><?= $key->m2_title; ?></a>
                         <p><?= $key->content; ?></p>
-                        <a href="<?= Url::to(['template/index','single' => $key->id]) ?>" class="btn btn-primary">voir !</a>
+                        <a href="<?= Url::to(['template/single', '/' => $key->id]) ?>" class="btn btn-primary">voir !</a>
                     </div>
                 </div>
             </div>

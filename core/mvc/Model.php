@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Model;
+namespace Core\Mvc;
 
 use PDO;
 use Core\Framework;

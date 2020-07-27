@@ -25,13 +25,13 @@ AppAsset::register($this);
             <div class="navbar-collapse">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= Url::to(['about/index']) ?>">about</a>
+                        <a class="nav-link" href="<?= Url::to(['template/new']); ?>">new</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= Url::to(['template/index']) ?>">web themes & templates</a>
                     </li>
                     <li class="nav-item hover-n">
-                        <a href="<?= Url::to(['about/index', '#' => 'contact']) ?>" class="btn btn btn-outline-warning">contactez-nous !</a>
+                        <a href="tel:0667527248" class="btn btn btn-outline-warning">Tel : 06.67.52.72.48</a>
                     </li>
                 </ul> <!-- end navbar-nav -->
             </div> <!-- end navbar-collapse -->
@@ -43,7 +43,7 @@ AppAsset::register($this);
             <div class="row">
                 <div class="col-6">
                     <ol class="breadcrumb">
-                        <?php 
+                        <?php  
                         if (isset($this->params['breadcrumb']) && is_array($this->params['breadcrumb'])) 
                         {
                             foreach ($this->params['breadcrumb'] as $breadcrumb) 

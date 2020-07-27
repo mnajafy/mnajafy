@@ -40,7 +40,7 @@ class Request extends BaseObject
         $this->_get[$name] = $value;
     }
 
-    public function get($name = null, $defaultValue = null) 
+    public function get($name = null) 
     {
         if ($name === null) 
         {
@@ -51,10 +51,10 @@ class Request extends BaseObject
         {
             return $this->_get[$name];
         }
-        return $defaultValue;
+        return null;
     }
 
-    public function post($name = null, $defaultValue = null) 
+    public function post($name = null) 
     {
         if ($name === null) 
         {
@@ -65,10 +65,10 @@ class Request extends BaseObject
         {
             return $this->_post[$name];
         }
-        return $defaultValue;
+        return null;
     }
 
-    public function files($name = null, $defaultValue = null) 
+    public function files($name = null) 
     {
         if ($name === null) 
         {
@@ -79,7 +79,7 @@ class Request extends BaseObject
         {
             return $this->_files[$name];
         }
-        return $defaultValue;
+        return null;
     }
     /**
      * @return string

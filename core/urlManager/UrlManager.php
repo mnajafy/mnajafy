@@ -53,7 +53,6 @@ class UrlManager extends BaseObject
         {
             return false;
         }
-
         $keys  = [];
         $items = [];
         preg_match_all('#{([\w]+)}#', $key, $items);

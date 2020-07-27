@@ -12,7 +12,7 @@ $this->title = 'home';
                 <div class="card bg-img">
                     <div class="card-body">
                         <a href="#" class="h3">Site Templates</a>
-                        <p>HTML and website templates</p>
+                        <p>Modèles HTML et site Web</p>
                     </div>
                 </div>
             </div> <!-- end col-4 -->
@@ -20,7 +20,7 @@ $this->title = 'home';
                 <div class="card bg-img">
                     <div class="card-body">
                         <a href="#" class="h3">portfolio</a>
-                        <p>Beautiful website templates</p>
+                        <p>Beaux modèles de site Web</p>
                     </div>
                 </div>
             </div> <!-- end col-4 -->
@@ -28,13 +28,13 @@ $this->title = 'home';
                 <div class="card bg-img">
                     <div class="card-body">
                         <a href="#" class="h3">eCommerce Templates</a>
-                        <p>Email, newsletter and landing page templates.</p>
+                        <p>Email, newsletter </p>
                     </div>
                 </div>
             </div> <!-- end col-4 -->
         </div> <!-- end row -->
         <div class="section-footer text-center">
-            <a class="btn btn-primary" href="#">View all categorie</a>
+            <a class="btn btn-primary" href="#">Voir toutes les catégories !</a>
         </div>
     </div> <!-- end container -->
 </section> <!-- end section -->

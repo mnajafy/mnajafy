@@ -10,7 +10,7 @@ use Core\BaseObject;
  */
 class View extends BaseObject 
 {
-    /**
+    /** 
      * @var string
      */
     public $title = 'hello world !';

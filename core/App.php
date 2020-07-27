@@ -169,8 +169,9 @@ class App extends BaseObject
         return $this->controller->runAction($actionID, $params);
     }
 
-    public function createController($controllerID) {
-        $controllerName = str_replace(' ', '', ucwords(str_replace('-', ' ', $controllerID)));
+    public function createController($controllerID) 
+    {
+        $controllerName = ucwords(str_replace('-', '', $controllerID));
         $className      = $this->controllerNamespace . '\\' . $controllerName . 'Controller';
         
         if (!class_exists($className) || !is_subclass_of($className, 'Core\Mvc\Controller')) 
